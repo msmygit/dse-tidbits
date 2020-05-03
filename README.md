@@ -12,6 +12,7 @@ This repository contains a number of auxiliary scripts and documents for Cassand
 * [Minimum OpsCenter metrics to watchout on a DSE cluster](documents/minimum_opscenter_metrics_to_watchout.md)
 ## [Scripts](scripts/)
 * [DataStax Recommended Settings validation script](scripts/dse_recommended_settings_check.md)
+* [How to perform a package install of DataStax suite of products using Ansible automation?](https://github.com/msmygit/dse-pkg-install)
 * [How to find Apache Cassandra&trade; SimpleStrategy keyspaces?](scripts/Find_Cassandra_SimpleStrategy_keyspaces.md)
 * [How to find DataStax Enterprise (DSE) Search core information?](scripts/dse_search_core_info_viewing.md)
 * [How to find OpsCenter Alert Rules?](scripts/How_to_find_OpsCenter_Alert_Rules.md)
