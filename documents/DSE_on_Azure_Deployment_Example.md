@@ -1,6 +1,6 @@
 # DataStax Enterprise (DSE) on Azure Deployment Configuration Example
 **_NOTE:_** This page will depict an example Azure Deployment configuration.
-![alt text](https://github.com/msmygit/dse-titbits/images/azure_dse.png "DSE on Azure deployment example")
+![alt text](https://github.com/msmygit/dse-titbits/blob/master/images/azure_dse.png "DSE on Azure deployment example")
 
 * Other Similar References of Interest
   * [Azure Deployment Guide](https://github.com/DSPN/azure-deployment-guide/blob/master/bestpractices.md)
