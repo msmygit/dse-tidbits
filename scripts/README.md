@@ -1,0 +1,1 @@
+This repository contains a number of auxiliary scripts for Cassandra or DSE that simplify their maintenance.
