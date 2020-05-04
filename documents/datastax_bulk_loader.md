@@ -7,6 +7,7 @@
   * [DSBulk Introduction and Loading](https://academy.datastax.com/content/datastax-bulk-loader-introduction-and-loading)
   * [DSBulk More Loading](https://academy.datastax.com/content/datastax-bulk-loader-more-loading)
   * [DSBulk Common Settings](https://academy.datastax.com/content/datastax-bulk-loader-common-settings)
+  * [Loading data into DataStax Astra using DSBulk](https://github.com/DataStax-Examples/dsbulk-to-astra)
 
 * Distributed Data Show
   * [Episode 49: Bulk Loading with Brian Hess](https://www.youtube.com/watch?v=CAH7Mlg_rVI)
