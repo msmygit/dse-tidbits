@@ -10,6 +10,7 @@ This repository contains a number of auxiliary scripts and documents for Cassand
 * [Package versus Tarball installation methods of DataStax Enterprise (DSE) & OpsCenter comparison](documents/Package_vs_Tarball_install_DSE_OpsCenter_Agents.md)
 * [DataStax Bulk Loader References](documents/datastax_bulk_loader.md)
 * [Minimum OpsCenter metrics to watchout on a DSE cluster](documents/minimum_opscenter_metrics_to_watchout.md)
+* [DataStax Enterprise (DSE) Tarball install config & managing DSE as-a-service](documents/DataStax_Enterprise_Configuration_Directions_Tarball_Install.md)
 ## [Scripts](scripts/)
 * [DataStax Recommended Settings validation script](scripts/dse_recommended_settings_check.md)
 * [How to perform a package install of DataStax suite of products using Ansible automation?](https://github.com/msmygit/dse-pkg-install)
