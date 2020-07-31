@@ -1,6 +1,6 @@
-<center><h1> Working with DataStax Astra&trade; </h1></center>
+<center><h1> Working with DataStax Astra </h1></center>
 
-# DataStax Astra
+# DataStax Astra&trade;
 [Astra](https://www.datastax.com/products/datastax-astra) is a Cloud-Native, NoSQL, Scale-Out, Distributed, Hybrid Database-as-a-Service built on Apache Cassandra&trade; brought to you by DataStax&trade;. Astra simplifies cloud-native Cassandra application development. It reduces deployment time from weeks to minutes, removing the biggest obstacle to using Cassandra, which is behind many of the most heavily used applications in the world.
 
 **_NOTE_**: This page provides you with information interacting with DataStax Astra using variety of methods.
@@ -35,7 +35,7 @@ Astra provides the following features out of the box,
 5. Working with Astra using REST API
 6. Working with Astra using GraphQL API
 
-## Creating tables & loadin data using [NoSQLBench](docs.nosqlbench.io)
+## Creating tables & loading data using [NoSQLBench](docs.nosqlbench.io)
 
 ### Prerequisites
 1. Download and setup [NoSQLBench](https://github.com/nosqlbench/nosqlbench/blob/main/DOWNLOADS.md#getting-nosqlbench)
