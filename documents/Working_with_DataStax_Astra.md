@@ -8,7 +8,7 @@
 Astra provides the following features out of the box,
 * **10 Gig Free Tier**: Launch a database in the cloud with a few clicks, no credit card required
 * **No Operations**: Eliminate the overhead to install, operate, and scale Cassandra
-* **Powerful APIs**: Out-of-the-box REST and GraphQL endpoints and browser CQL shell
+* **Powerful APIs**: Out-of-the-box REST and GraphQL endpoints and browser based CQL shell
 * **Cloud-Native**: Powered by our [open-source Kubernetes Operator for Cassandra](https://www.datastax.com/dev/kubernetes)
 * **Zero Lock-In**: Deploy on AWS or GCP (or Azure [coming shortly...]) and keep compatibility with open-source Cassandra
 * **Global Scale**: Put your data where you need it without compromising performance, availability or accessibility
@@ -151,13 +151,14 @@ Let's query `users1` table using this index by running the following,
 SELECT * FROM <your_astra_keyspace_name>.users1 WHERE designation = 'fifty';
 ```
 You should be seeing the result as below,
-TODO: Attach screenshot
+![alt text](astra_playground/sai_select_case_sensitive.png "Example of fetching rows using SAI index")
 
 Now let's use the same exact query but, search for a mixed case value for designation column `Fifty`. Expected out: No records fetched. Why? We purposefully created the SAI index without extra option when we originally created the schema.
 ```bash
 SELECT * FROM <your_astra_keyspace_name>.users1 WHERE designation = 'Fifty';
 ```
-TODO: Attach screenshot
+You should be seeing the no records fetched for our query as below,
+![alt text](astra_playground/sai_select_case_sensitive_no_rows.png "Example demo showing no results fetched when using mixed case values to query the default SAI index")
 
 Let's drop the index and recreate with additional options to allow for case insensitive search capability,
 ```bash
@@ -171,7 +172,8 @@ Now let's execute the same query and this time around we will see our record bac
 ```bash
 SELECT * FROM <your_astra_keyspace_name>.users1 WHERE designation = 'Fifty';
 ```
-TODO: Attach screenshot 🎓➡️ 🔥⬅️ 👨‍🏫 📅 
+![alt text](astra_playground/sai_select_case_sensitive_with_rows.png "Example demo showing results fetched when using mixed case values to query using SAI index")
+🎓➡️ 🔥⬅️ 👨‍🏫 📅 
 
 ## Working with Astra using REST APIs
 Lets access Astra using the out-of-the-box REST API that is available for developers.
