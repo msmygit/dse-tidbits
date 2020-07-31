@@ -1,0 +1,59 @@
+bindings:
+  designation: NumberNameToString();
+  email: Template('{}.{}@{}.com', FirstNames(), LastNames(), NumberNameToString());
+  last_name: LastNames();
+  first_name: FirstNames();
+  address: Template('{} {} {}, {}, {} {}', CycleRange(100,999), LastNames(), WeightedStrings('Street:1;Road:1;Lane:1;Place:1'), WeightedStrings('Pittsburgh:1;Sunnyvale:1;Raleigh:1;Durham:1;Santa Clara:1'), WeightedStrings('PA:1;CA:1;MA:1;NC:1'), CycleRange(10000,99999));
+blocks:
+  - tags:
+      phase: schema
+    params:
+      prepared: false
+    statements:
+#      - create-keyspace: >
+#          CREATE KEYSPACE IF NOT EXISTS <<keyspace:test>> WITH replication =
+#          {'class': 'SimpleStrategy','replication_factor' : 1 } AND
+#          durable_writes = 'true';
+#        tags:
+#          name: create-schema
+      - create-table1: >
+          CREATE TABLE IF NOT EXISTS
+          <<keyspace:test>>.<<table:users>> (
+              last_name text,
+              first_name text,
+              email text,
+              address text,
+              designation text,
+              PRIMARY KEY (last_name, first_name, email)
+          ) WITH CLUSTERING ORDER BY (first_name ASC, email ASC);
+        tags:
+          name: create-table1
+      - create-table2: >
+          CREATE TABLE IF NOT EXISTS
+          <<keyspace:test>>.<<table:users1>> (
+              last_name text,
+              first_name text,
+              email text,
+              address text,
+              designation text,
+              PRIMARY KEY (last_name, first_name, email)
+          ) WITH CLUSTERING ORDER BY (first_name ASC, email ASC);
+        tags:
+          name: create-table2
+      - create-index1: >
+          CREATE CUSTOM INDEX IF NOT EXISTS <<keyspace:test>>_<<table:users1>>_designation_idx ON
+          <<keyspace:test>>.<<table:users1>> (designation)
+          USING 'StorageAttachedIndex';
+        tags:
+          name: create-index
+  - tags:
+      phase: rampup
+    params:
+      prepared: true
+      cl: '<<write_cl:LOCAL_QUORUM>>'
+    statements:
+      - insert: >
+          INSERT INTO <<keyspace:test>>.<<table:users>>
+          (last_name, first_name, email, address, designation) VALUES ({last_name}, {first_name}, {email}, {address}, {designation});
+        tags:
+          name: insert-rampup

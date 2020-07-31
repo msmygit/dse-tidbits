@@ -280,7 +280,7 @@ Tarball installs are more involved as they require many steps that are usually a
    
 4. Edit Cassandra configuration files
    
-   Note: Update all references to `localhost` and `127.0.0.1` with the node's local IP.
+   **Note**: Update all references to `localhost` and `127.0.0.1` with the node's local IP.
    
    **`resources/cassandra/conf/cassandra.yaml`** - _for the sake of brevity we are only going to list options that require changes_
    ```yaml
