@@ -4,6 +4,7 @@
   * [Introducing DataStax Bulk Loader - 08-May-2018](https://www.datastax.com/2018/05/introducing-datastax-bulk-loader)
 
 * DataStax Academy Developer Blogs,
+  * [DSBulk - Invoking loading, unloading, and counting operations programmatically in your Java applications!](https://www.datastax.com/blog/2020/08/open-source-ftw-new-tools-apache-cassandratm)
   * [DSBulk Introduction and Loading](https://academy.datastax.com/content/datastax-bulk-loader-introduction-and-loading)
   * [DSBulk More Loading](https://academy.datastax.com/content/datastax-bulk-loader-more-loading)
   * [DSBulk Common Settings](https://academy.datastax.com/content/datastax-bulk-loader-common-settings)
