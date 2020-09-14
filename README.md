@@ -1,5 +1,5 @@
 ```
-This repository contains a number of auxiliary scripts and documents for Cassandra or DSE that simplify their maintenance/operations.
+This repository contains a number of auxiliary scripts, code and documents for Cassandra or DSE that simplify their development, maintenance/operations.
 ```
 # What is included?
 ## [Documentation](documents/)
@@ -20,5 +20,6 @@ This repository contains a number of auxiliary scripts and documents for Cassand
 * [How to find OpsCenter Alert Rules?](scripts/How_to_find_OpsCenter_Alert_Rules.md)
 * [How to find OpsCenter point-in-time and scheduled backups?](scripts/Find_PIT_Scheduled_Backups_DataStax_OpsCenter.md)
 * [How to customize a tarball installation of DataStax OpsCenter DSE start/stop scripts?](scripts/OpsCenter_tarball_install_custom_start-stop_scripts.md)
-
+## [DataStax Java Driver 4.x Examples](java-driver-4.x/)
+* [How to leverage `solr_query` column using Java Driver Mapper](java-driver-4.x/)
 ---
