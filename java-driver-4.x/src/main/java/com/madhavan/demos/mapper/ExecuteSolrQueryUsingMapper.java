@@ -12,7 +12,7 @@ import com.datastax.oss.driver.api.core.cql.SimpleStatement;
  *
  */
 public class ExecuteSolrQueryUsingMapper {
-    private static final String searchDatacenterName = "olasgp";
+    private static final String searchDatacenterName = "search";
     public static void main(String[] args) {
 	try (CqlSession session = new CqlSessionBuilder()
 		//.withAuthCredentials(System.getProperty("uid"), System.getProperty("pwd"))

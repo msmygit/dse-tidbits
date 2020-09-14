@@ -1,6 +1,5 @@
-```
 This repository contains a number of auxiliary scripts, code and documents for Cassandra or DSE that simplify their development, maintenance/operations.
-```
+
 # What is included?
 ## [Documentation](documents/)
 * [Working with DataStax Astra&trade;](documents/Working_with_DataStax_Astra.md)
