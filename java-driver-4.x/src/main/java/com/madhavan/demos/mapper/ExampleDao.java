@@ -21,6 +21,9 @@ public interface ExampleDao {
     @Query("SELECT * FROM ${keyspaceId}.${tableId} WHERE solr_query = :solr_query")
     Example findByValueSearchIndex(String solr_query);
 
+    @Select(customWhereClause = "solr_query = :solr_query")
+    Example findByValueSearchIndex1(String solr_query);
+
     @Insert
     void save(Example id);
 

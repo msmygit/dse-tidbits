@@ -16,7 +16,8 @@ The prerequisites required for this example to run are,
    [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core)  version 4.9.0
    [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
    Result is: Example [id=5, value=5]
-   Search result is: Example [id=5, value=5]
+   Search using @Query result is: Example [id=5, value=5]
+   Search using @Select(customWhereClause) result is: Example [id=5, value=5]
    ----DONE----
    ```
 ---
