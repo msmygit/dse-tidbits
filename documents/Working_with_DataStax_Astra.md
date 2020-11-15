@@ -6,11 +6,11 @@
 **_NOTE_**: This page provides you with information interacting with DataStax Astra using variety of methods.
 
 Astra provides the following features out of the box,
-* **10 Gig Free Tier**: Launch a database in the cloud with a few clicks, no credit card required
+* **5 GB Free-Forever Tier**: Launch a database in the cloud with a few clicks, no credit card required
 * **No Operations**: Eliminate the overhead to install, operate, and scale Cassandra
 * **Powerful APIs**: Out-of-the-box REST and GraphQL endpoints and browser based CQL shell
 * **Cloud-Native**: Powered by our [open-source Kubernetes Operator for Cassandra](https://www.datastax.com/dev/kubernetes)
-* **Zero Lock-In**: Deploy on AWS or GCP (or Azure [coming shortly...]) and keep compatibility with open-source Cassandra
+* **Zero Lock-In**: Deploy on AWS or GCP or Azure and keep compatibility with open-source Cassandra
 * **Global Scale**: Put your data where you need it without compromising performance, availability or accessibility
 
 <details>
@@ -437,4 +437,5 @@ foo@cqlsh:astra1> SELECT * FROM astra1.table1;
 ```
 This example clearly demonstrates `foo` only has a sub-set of permissions (`SELECT`) of what `bar` had in here (`CREATE` & `UPDATE`).
 
+*Tip:* Head over to [my next blog demonstrating the usage of DevOps & Data APIs using Ansible](./Working_with_DataStax_Astra_API_Ansible.md).
 ---

@@ -1,0 +1,385 @@
+# Demonstration of using Astra APIs (DevOps & Data) with Ansible
+# ansible-playbook astra_api.yml --extra-vars 'clientName=latest-free-tier clientId=99b06ab8-0f88-4b6d-80d3-67b16730375f clientSecret=f2abb25c-52aa-4f4c-ac52-b4205dfb2993 astra_db_name=astra astra_db_keyspace=astra astra_db_cloudProvider=GCP astra_db_tier=developer astra_db_capacityUnits=1 astra_db_region=us-east1 astra_db_username=astra astra_db_tableName=astra'
+# Prerequisite: Create an Astra account, Create a Service Account, Copy the Credentials -- https://docs.astra.datastax.com/docs/creating-a-new-service-account-for-your-database
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars_prompt:
+    - name: clientName
+      prompt: Enter the clientName
+      private: no
+    - name: clientId
+      prompt: Enter the clientId
+      private: no
+    - name: clientSecret
+      prompt: Enter the clientSecret
+      private: yes
+    - name: astra_db_name
+      prompt: Enter your Astra database name?
+    - name: astra_db_keyspace
+      prompt: Enter your Astra database's keyspace name?
+    - name: astra_db_cloudProvider
+      prompt: "Enter the cloud provider name where you need Astra database to be created? Examples: AWS/AZURE/GCP"
+    - name: astra_db_tier
+      prompt: "Enter your Astra database tier? Examples: developer/a5/a10/a20/a40/c10/c20/c40/d10/d20/d40"
+    - name: astra_db_capacityUnits
+      prompt: "Enter your Astra database capacity units?"
+    - name: astra_db_region
+      prompt: "Enter your Astra database region?"
+    - name: astra_db_username
+      prompt: "Enter your Astra database username?"
+    - name: astra_db_password
+      prompt: "Enter your Astra database password?"
+      private: yes
+    - name: astra_db_tableName
+      prompt: "Enter your Astra database table name?"
+  tasks:
+    - name: Create a token to use the Astra DevOps API endpoints
+      uri:
+          url: https://api.astra.datastax.com/v2/authenticateServiceAccount
+          method: POST
+          headers:
+            Accept: application/json
+            Content-Type: application/json
+          body:
+              clientName: "{{ clientName }}"
+              clientId: "{{ clientId }}"
+              clientSecret: "{{ clientSecret }}"
+          body_format: json
+          timeout: 30
+          status_code: 200
+      register: astra_devops_api_auth_token
+    - name: Print the authentication token for debugging
+      debug:
+        var: astra_devops_api_auth_token.json.token
+      when:
+        - astra_devops_api_auth_token is defined
+    - name: Returns supported regions and availability for a given user and org combination
+      uri:
+          url: "https://api.astra.datastax.com/v2/availableRegions"
+          method: GET
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 30
+          status_code: 200
+      register: supported_regions_for_user_org
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+    - name: Print the supported region and availability for a given user and org combination response for debugging
+      debug:
+        var: supported_regions_for_user_org
+      when:
+        - supported_regions_for_user_org is defined
+    - name: Create a new Astra database
+      uri:
+          url: https://api.astra.datastax.com/v2/databases
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          body: >
+            {
+              "name": "{{ astra_db_name | default('astra') }}",
+              "keyspace": "{{ astra_db_keyspace | default('astra') }}",
+              "cloudProvider": "{{ astra_db_cloudProvider | default('GCP') }}",
+              "tier": "{{ astra_db_tier | default('developer') }}",
+              "capacityUnits": {{ astra_db_capacityUnits | default(1) | int }},
+              "region": "{{ astra_db_region | default('us-east1') }}",
+              "user": "{{ astra_db_username | default('astra') }}",
+              "password": "{{ astra_db_password | default('Astra123') }}"
+            }
+          body_format: json
+          timeout: 60
+          status_code: 201
+      register: create_astra_db_response
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+    - name: Print the create Astra database response for debugging
+      debug:
+        var: create_astra_db_response.location
+      when:
+        - create_astra_db_response is defined
+    - name: Find the created Astra database using its ID
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}"
+          method: GET
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 30
+          status_code: 200
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+      register: find_astra_db_by_id_response
+      until: (find_astra_db_by_id_response.json.status == 'ACTIVE')
+      retries: 100
+      delay: 30
+    - name: Print the Find the created Astra database using its ID response for debugging
+      debug:
+        var: find_astra_db_by_id_response
+      when:
+        - find_astra_db_by_id_response is defined
+    - name: Obtain the secure connect bundle for the created Astra database using its ID
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}/secureBundleURL"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 30
+          status_code: 200
+      register: secure_connect_bundle_url
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+    - name: Print the obtain the secure connect bundle for the created Astra database response for debugging
+      debug:
+        var: secure_connect_bundle_url
+      when:
+        - secure_connect_bundle_url is defined
+    - name: Add a keyspace in the created Astra database
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}/keyspaces/{{ astra_db_keyspace }}"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 30
+          status_code: 201
+      register: create_keyspace_response
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+    - name: Print the created Astra database keyspace name response for debugging
+      debug:
+        var: create_keyspace_response
+      when:
+        - create_keyspace_response is defined
+    - name: Create a token to use the Data API for the Astra database using its ID
+      uri:
+          url: "https://{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}-{{ astra_db_region }}.apps.astra.datastax.com/api/rest/v1/auth"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+          body:
+              username: "{{ astra_db_username | default('astra') }}"
+              password: "{{ astra_db_password | default('Astra123') }}"
+          body_format: json
+          timeout: 30
+          status_code: 201
+      register: astra_data_api_auth_token
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - create_keyspace_response is defined
+    - name: Print the create data auth token in Astra database response for debugging
+      debug:
+        var: astra_data_api_auth_token
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - create_keyspace_response is defined
+        - astra_data_api_auth_token is defined
+        - astra_data_api_auth_token.json.authToken | length > 0
+    - name: Return all keyspaces in the Astra database using its ID
+      uri:
+          url: "https://{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}-{{ astra_db_region }}.apps.astra.datastax.com/api/rest/v1/keyspaces"
+          method: GET
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            X-Cassandra-Token: "{{ astra_data_api_auth_token.json.authToken }}"
+          timeout: 30
+          status_code: 200
+      register: return_all_keyspaces
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - astra_data_api_auth_token is defined
+        - astra_data_api_auth_token.json.authToken | length > 0
+    - name: Print the return all keyspaces in Astra database response for debugging
+      debug:
+        var: return_all_keyspaces
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - create_keyspace_response is defined
+        - return_all_keyspaces is defined
+    - name: Add a table in the created Astra database
+      uri:
+          url: "https://{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}-{{ astra_db_region }}.apps.astra.datastax.com/api/rest/v1/keyspaces/{{ astra_db_keyspace }}/tables"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            X-Cassandra-Token: "{{ astra_data_api_auth_token.json.authToken }}"
+          #,"clusteringExpression":[{"column":"ck1","order":"ASC"},{"column":"ck2","order":"DESC"}]  
+          body: >
+            {"name": "{{ astra_db_tableName }}","ifNotExists": true,"columnDefinitions":[
+                  {"static":false,"name":"pk1","typeDefinition":"int"},
+                  {"static":false,"name":"pk2","typeDefinition":"text"},
+                  {"static":false,"name":"ck1","typeDefinition":"double"},
+                  {"static":false,"name":"ck2","typeDefinition":"date"},
+                  {"static":false,"name":"c1","typeDefinition":"timeuuid"}],"primaryKey":{"partitionKey":["pk1","pk2"],"clusteringKey":["ck1","ck2"]},"tableOptions":{"defaultTimeToLive":0}}
+          body_format: json
+          timeout: 30
+          status_code: 201
+      register: create_table_response
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - create_keyspace_response is defined
+        - astra_data_api_auth_token is defined
+        - astra_data_api_auth_token.json.authToken | length > 0
+    - name: Print the created Astra database table name response for debugging
+      debug:
+        var: create_table_response
+      when:
+        - create_table_response is defined
+    - name: Return all tables in the Astra database using its ID
+      uri:
+          url: "https://{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}-{{ astra_db_region }}.apps.astra.datastax.com/api/rest/v1/keyspaces/{{ astra_db_keyspace }}/tables"
+          method: GET
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            X-Cassandra-Token: "{{ astra_data_api_auth_token.json.authToken }}"
+          timeout: 30
+          status_code: 200
+      register: return_all_tables
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - create_keyspace_response is defined
+        - create_table_response is defined
+        - astra_data_api_auth_token is defined
+        - astra_data_api_auth_token.json.authToken | length > 0
+    - name: Print the return all tables response for debugging
+      debug:
+        var: return_all_tables
+      when:
+        - return_all_tables is defined
+    - name: Resize the already created Astra database
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}/resize"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          body: >
+            {
+              "capacityUnits": {{ astra_db_capacityUnits | default(3) | int }}
+            }
+          body_format: json
+          timeout: 30
+          status_code: 202
+      register: resize_astra_db
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+        - astra_db_tier != 'developer'
+    - name: Print resize the already created Astra database response for debugging
+      debug:
+        var: resize_astra_db
+      when:
+        - resize_astra_db is defined
+        - astra_db_tier is defined
+        - astra_db_tier != 'developer'
+    - name: Park the already created Astra database
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}/park"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 600
+          status_code: 202
+      register: park_astra_db
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+    - name: Print park the already created Astra database response for debugging
+      debug:
+        var: park_astra_db
+      when:
+        - park_astra_db is defined
+    - name: Find the parked Astra database using its ID
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}"
+          method: GET
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 30
+          status_code: 200
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+      register: find_parked_astra_db_by_id_response
+      until: (find_parked_astra_db_by_id_response.json.status == 'PARKED')
+      retries: 100
+      delay: 30
+    - name: Print the find the parked Astra database using its ID response for debugging
+      debug:
+        var: find_parked_astra_db_by_id_response
+      when:
+        - find_parked_astra_db_by_id_response is defined
+    - name: Unpark the already created Astra database
+      uri:
+          url: "https://api.astra.datastax.com/v2/databases/{{ create_astra_db_response.location | regex_search('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}') }}/unpark"
+          method: POST
+          headers:
+            Accept: "application/json"
+            Content-Type: "application/json"
+            Authorization: "Bearer {{ astra_devops_api_auth_token.json.token }}"
+          timeout: 600
+          status_code: 202
+      register: unpark_astra_db
+      when:
+        - astra_devops_api_auth_token is defined
+        - astra_devops_api_auth_token.json.token | length > 0
+        - create_astra_db_response.location is defined
+        - create_astra_db_response.location | length > 0
+    - name: Print park the already created Astra database response for debugging
+      debug:
+        var: unpark_astra_db
+      when:
+        - unpark_astra_db is defined

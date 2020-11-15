@@ -3,6 +3,7 @@ This repository contains a number of auxiliary scripts, code and documents for C
 # What is included?
 ## [Documentation](documents/)
 * [Working with DataStax Astra&trade;](documents/Working_with_DataStax_Astra.md)
+* [Working with DataStax Astra&trade; DevOps & Data APIs with Ansible](documents/Working_with_DataStax_Astra_API_Ansible.md)
 * [Public cloud provider status dashboards, architectural diagrams, etc.,](documents/Cloud_provider_status_dashboards_icons_and_general.md)
 * [DataStax Enterprise (DSE) & OpsCenter environment sizing example](documents/DataStax_Enterprise_on_Azure_Environment_Sizing_Example.md)
 * [DataStax Enterprise (DSE) on Azure cloud deployment example](documents/DSE_on_Azure_Deployment_Example.md)
