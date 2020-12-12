@@ -1,1 +1,1 @@
-This repository contains a number of auxiliary scripts for Cassandra or DSE that simplify their maintenance.
+This repository contains a number of auxiliary scripts for working with Apache Cassandra&trade; or DSE&trade;.

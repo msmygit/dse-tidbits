@@ -13,6 +13,7 @@ This repository contains a number of auxiliary scripts, code and documents for C
 * [Minimum OpsCenter metrics to watchout on a DSE cluster](documents/minimum_opscenter_metrics_to_watchout.md)
 * [DataStax Enterprise (DSE) Tarball install config & managing DSE as-a-service](documents/DataStax_Enterprise_Configuration_Directions_Tarball_Install.md)
 ## [Scripts](scripts/)
+* [How to hook up Stargate with DataStax Enterprise (DSE)?](scripts/stargate-dse687/Working_with_Stargate_and_DSE.md)
 * [DataStax Recommended Settings validation script](scripts/dse_recommended_settings_check.md)
 * [How to perform a package install of DataStax suite of products using Ansible automation?](https://github.com/msmygit/dse-pkg-install)
 * [How to find Apache Cassandra&trade; SimpleStrategy keyspaces?](scripts/Find_Cassandra_SimpleStrategy_keyspaces.md)

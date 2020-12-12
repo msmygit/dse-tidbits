@@ -64,7 +64,7 @@ Optionally, one could pass in the answers via command-line by running the follow
 
 You would notice output similar to the below post your playbook has completed successfully. I have shortened both the debug & supported regions information from the below output for brevity. Also, we would have skipped resizing the created Astra&trade; DB here during this run as this operation is not supported with the free tier.
    ```java
-   $ ansible-playbook parks.yml --extra-vars 'clientName=latest-free-tier clientId=9b906ab8-0f88-4b6d-80d3-67b16730375f clientSecret=f2bab25c-52aa-4f4c-ac52-b4205df2b993 astra_db_name=astra astra_db_keyspace=astra astra_db_cloudProvider=gcp astra_db_tier=developer astra_db_capacityUnits=1 astra_db_region=us-east1 astra_db_username=astra astra_db_keyspaceName=astra astra_db_tableName=astra'
+   $ ansible-playbook astra_api.yml --extra-vars 'clientName=latest-free-tier clientId=9b906ab8-0f88-4b6d-80d3-67b16730375f clientSecret=f2bab25c-52aa-4f4c-ac52-b4205df2b993 astra_db_name=astra astra_db_keyspace=astra astra_db_cloudProvider=gcp astra_db_tier=developer astra_db_capacityUnits=1 astra_db_region=us-east1 astra_db_username=astra astra_db_keyspaceName=astra astra_db_tableName=astra'
    [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
    Enter your Astra database password?:    
    PLAY [localhost]    ****************************************************************************************************************************************************   ******************************   
