@@ -1,6 +1,7 @@
 <center><h1> Hooking up Stargate and DataStax Enterprise&trade; </h1></center>
-
+<!--
 ![alt text](https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png "Stargate")
+-->
 <center>
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
@@ -10,25 +11,29 @@
   </tr>
 </table>
 </center>
-
+<!--
 <p align="center">
   <img src="https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png" alt="Stargate" width="250" style="vertical-align:middle"/>
    ❤️❤️❤️ 
   <img src="https://www.datastax.com/sites/default/files/2020-07/Enterprise_Logo.png" alt="DataStax Enterprise" width="250" style="vertical-align:middle">
 </p>
-
+-->
+<!--
 |:---:|:---:|:---:|
 <img src="https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png" alt="Stargate" width="250" style="vertical-align:middle"/>| ❤️❤️❤️ |<img src="https://www.datastax.com/sites/default/files/2020-07/Enterprise_Logo.png" alt="DataStax Enterprise" width="250" style="vertical-align:middle">
+-->
 
 # Stargate
 [Stargate](stargate.io) is an open source data gateway that sits between your app and your databases. Stargate brings together an API platform and data request coordination code into one OSS project. Stargate abstracts Cassandra-specific concepts entirely from app developers and supports different API options, removing barriers of entry for new software developers. Watch [this introduction video](https://youtu.be/2ltVf2EscmM) about Stargate to get excited about!
 
 <p align="center"><a href="https://youtu.be/2ltVf2EscmM" target="_blank"><img src="https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png" alt="Super power Stargate" width="240" height="240"/></a></p>
 
+<!--
 [![Super power Stargate](https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png)](https://youtu.be/2ltVf2EscmM)
 [![Super power Stargate](http://img.youtube.com/vi/2ltVf2EscmM/0.jpg)](https://youtu.be/2ltVf2EscmM)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ltVf2EscmM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
 Stargate offers the following right out of the box when it got GA'd on December 09, 2020:
 1. JSON API: [Save and search schemaless JSON documents](https://stargate.io/docs/stargate/1.0/developers-guide/api_ref/openapi_rest_ref.html)
@@ -189,5 +194,6 @@ Now let's start Stargate by running the following command,
 * [Default file locations for DSE tarball installation](https://docs.datastax.com/en/install/6.8/install/dseTarLoc.html)
 * [Stargate `startctl` command reference](https://stargate.io/docs/stargate/1.0/developers-guide/install/starctl.html)
 * [Stargate Dev Guide for running locally](https://github.com/stargate/stargate/blob/master/DEV_GUIDE.md)
+* [Stargate Quickstart APIs](https://stargate.io/docs/stargate/1.0/quickstart/quickstart.html)
 
 ---
