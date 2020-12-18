@@ -27,6 +27,8 @@ Astra provides the following features out of the box,
 |https://astra.datastax.com/register|https://docs.astra.datastax.com/docs/sample-apps|https://www.datastax.com/blog/2020/07/take-flight-live-and-free-migration-your-apache-cassandra-apps|
 ---
 
+See all these in a video by clicking [here](https://youtu.be/Gi2agdmH8qo)!
+
 ## Agenda
 Today's agenda is to demonstrate leveraging the Astra&trade; DevOps & Data APIs from Ansible. With just one single playbook, we will be demonstrating the following DevOps & Data operations:
 1. Create a token to use the Astra DevOps API endpoints
