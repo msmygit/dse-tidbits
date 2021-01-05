@@ -7,7 +7,8 @@
   <tr>
     <td><img src="https://github.com/stargate/website/blob/master/assets/images/stargate-profile.png" alt="Stargate" width="250"/></td>
     <td> ❤️❤️❤️ </td>
-    <td><img src="https://www.datastax.com/sites/default/files/2020-07/Enterprise_Logo.png" alt="DataStax Enterprise" width="250"></td>
+    <!--td><img src="https://www.datastax.com/sites/default/files/2020-07/Enterprise_Logo.png" alt="DataStax Enterprise" width="250"></td-->
+    <td><img src="https://www.datastax.com/sites/default/files/2020-12/ds-enterprise-logotype.png" alt="DataStax Enterprise" width="250"></td>
   </tr>
 </table>
 </center>
@@ -121,6 +122,8 @@ Other helpful commands to inspect both Stargate (`stargate`) & DSE `6.8.7` (`bac
 You might want to *stop* the Docker containers once the work is completed by executing `docker stop stargate backend-1` as it is resource intensive.
 
 *That's all voila!! ✨ You've successfully hooked up Stargate with DataStax Enterprise&trade; (DSE) using Docker!*
+
+*Tip*: One could visit the Swagger UI and leverage the *Try it out* by navigating to http://localhost:8082/swagger-ui/#/
 
 ## Running Stargate with a stand-alone tarball installation of DSE&trade;
 
