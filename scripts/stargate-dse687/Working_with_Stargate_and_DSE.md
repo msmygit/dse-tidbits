@@ -123,7 +123,8 @@ You might want to *stop* the Docker containers once the work is completed by exe
 
 *That's all voila!! ✨ You've successfully hooked up Stargate with DataStax Enterprise&trade; (DSE) using Docker!*
 
-*Tip*: One could visit the Swagger UI and leverage the *Try it out* by navigating to http://localhost:8082/swagger-ui/#/
+*Tip 1*: One could visit the Swagger UI and leverage the *Try it out* by navigating to http://localhost:8082/swagger-ui/#/
+*Tip 2*: One could visit the GraphQL playground and leverage the same by navigating to http://localhost:8080/playground
 
 ## Running Stargate with a stand-alone tarball installation of DSE&trade;
 
