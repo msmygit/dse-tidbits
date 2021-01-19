@@ -24,4 +24,5 @@ This repository contains a number of auxiliary scripts, code and documents for C
 * [Hoe to create a CSV file cfstats/tablestats diagnostics](scripts/tablestats_analysis/Create_a_CSV_file_from_cfstats_diagnostics.md)
 ## [DataStax Java Driver 4.x Examples](java-driver-4.x/)
 * [How to leverage `solr_query` column using Java Driver Mapper](java-driver-4.x/)
+* [How to create a table with Schema Builder using Geospatial types: `PointType`, `LineStringType` and `PolygonType`](java-driver-4.x/src/main/java/com/madhavan/demos/schemabuilder/CreateTableWithSchemaBuilder.java)
 ---
