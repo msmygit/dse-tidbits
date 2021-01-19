@@ -23,4 +23,5 @@ This repository contains a number of auxiliary scripts, code and documents for C
 * [How to customize a tarball installation of DataStax OpsCenter DSE start/stop scripts?](scripts/OpsCenter_tarball_install_custom_start-stop_scripts.md)
 ## [DataStax Java Driver 4.x Examples](java-driver-4.x/)
 * [How to leverage `solr_query` column using Java Driver Mapper](java-driver-4.x/)
+* [How to create a table with Schema Builder using Geospatial types: `PointType`, `LineStringType` and `PolygonType`](java-driver-4.x/src/main/java/com/madhavan/demos/schemabuilder/CreateTableWithSchemaBuilder.java)
 ---
