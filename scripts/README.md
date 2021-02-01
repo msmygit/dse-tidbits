@@ -1,1 +1,1 @@
-This repository contains a number of auxiliary scripts for working with Apache Cassandra&trade; or DSE&trade;.
+This repository contains a number of auxiliary scripts for working with Apache Cassandra&trade; or DSE&trade; or Stargate&trade; or etc.,
