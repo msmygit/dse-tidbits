@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting DSE 6.8.7...."
+echo "Starting DSE 6.8..."
 docker-compose --file stargatedse68.yml up --detach backend-1
 (docker-compose --file stargatedse68.yml logs -f backend-1 &) | grep -q "DSE startup complete."
 
