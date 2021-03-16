@@ -6,9 +6,9 @@
 **_NOTE_**: This page provides you with information interacting with DataStax Astra using variety of methods.
 
 Astra provides the following features out of the box,
-* **5 GB Free-Forever Tier**: Launch a database in the cloud with a few clicks, no credit card required
+* **$25 USD/mo Free-Forever Tier**: Launch a serverless database in the cloud with a few clicks, no credit card required. 25.00 USD /monthly = ~ 30 M Writes, 5M reads, 40GB storage (&ast;benchmarked on a N. American GCP DC)
 * **No Operations**: Eliminate the overhead to install, operate, and scale Cassandra
-* **Powerful APIs**: Out-of-the-box REST and GraphQL endpoints and browser based CQL shell
+* **Powerful APIs**: Out-of-the-box REST, Document and GraphQL endpoints and browser based CQL shell
 * **Cloud-Native**: Powered by our [open-source Kubernetes Operator for Cassandra](https://www.datastax.com/dev/kubernetes)
 * **Zero Lock-In**: Deploy on AWS or GCP or Azure and keep compatibility with open-source Cassandra
 * **Global Scale**: Put your data where you need it without compromising performance, availability or accessibility
