@@ -76,19 +76,19 @@ Today's agenda is to demonstrate how to hook up Stargate with DataStax Enterpris
 ## Running Stargate and DSE&trade; using Docker
 
 ### Prerequisites
-1. Download the included [`start_stargate_dse687_cluster.sh` script](./start_stargate_dse687_cluster.sh) and [`stargatedse68.yml` Docker compose file](./stargatedse68.yml) to your local machine
-2. Grant execute access by running `chmod +x start_stargate_dse687_cluster.sh` command
+1. Download the included [`start_stargate_dse68_cluster.sh` script](./start_stargate_dse68_cluster.sh) and [`stargatedse68.yml` Docker compose file](./stargatedse68.yml) to your local machine
+2. Grant execute access by running `chmod +x start_stargate_dse68_cluster.sh` command
 3. Make sure Docker is running. [Get Docker and install](https://docs.docker.com/get-docker/), as applicable
-3. Run `./start_stargate_dse687_cluster.sh`
+3. Run `./start_stargate_dse68_cluster.sh`
 
 ### Executing
 
 You should notice output as below. Your authToken *will* be different from below output,
 
    ```java
-   $ ./start_stargate_dse687_cluster.sh 
-   Starting DSE 6.8.7....
-   Creating network "stargate-dse687_backend" with the default driver
+   $ ./start_stargate_dse68_cluster.sh 
+   Starting DSE 6.8...
+   Creating network "stargate-dse68_backend" with the default driver
    Creating backend-1 ... done
    
    Starting Stargate...
@@ -101,7 +101,7 @@ You should notice output as below. Your authToken *will* be different from below
    Done!
    ```
 
-Your Docker dashboard will appear as below,
+Your Docker dashboard will appear as below (versions will be different),
 
    ![alt text](assets/stargate_dse687_docker_dashboard.png "Example Docker dashboard output")
 
@@ -110,12 +110,12 @@ Now we can get into `cqlsh` by executing `docker exec -it backend-1 cqlsh` and y
    ```java
    $ docker exec -it backend-1 cqlsh
    Connected to backend at 127.0.0.1:9042.
-   [cqlsh 6.8.0 | DSE 6.8.7 | CQL spec 3.4.5 | DSE protocol v2]
+   [cqlsh 6.8.0 | DSE 6.8.11 | CQL spec 3.4.5 | DSE protocol v2]
    Use HELP for help.
    cqlsh>
    ```
 
-Other helpful commands to inspect both Stargate (`stargate`) & DSE `6.8.7` (`backend-1`) container logs are,
+Other helpful commands to inspect both Stargate (`stargate`) & DSE `6.8.11` (`backend-1`) container logs are,
 * `docker-compose --file stargatedse68.yml logs -f stargate`
 * `docker-compose --file stargatedse68.yml logs -f backend-1`
 
@@ -123,44 +123,44 @@ You might want to *stop* the Docker containers once the work is completed by exe
 
 *That's all voila!! ✨ You've successfully hooked up Stargate with DataStax Enterprise&trade; (DSE) using Docker!*
 
-*Tip 1*: One could visit the Swagger UI and leverage the *Try it out* by navigating to http://localhost:8082/swagger-ui/#/
-*Tip 2*: One could visit the GraphQL playground and leverage the same by navigating to http://localhost:8080/playground
+* *Tip 1*: One could visit the Swagger UI and leverage the *Try it out* by navigating to http://localhost:8082/swagger-ui/#/
+* *Tip 2*: One could visit the GraphQL playground and leverage the same by navigating to http://localhost:8080/playground
 
 ## Running Stargate with a stand-alone tarball installation of DSE&trade;
 
 ### Prerequisites
-1. Download DSE `6.8.7` tarball either using cURL or from downloads.datastax.com/#enterprise website
-2. Download Stargate jars `stargate-jars.zip` from https://github.com/stargate/stargate/releases/download/v1.0.0/stargate-jars.zip
+1. Download DSE `6.8.11` tarball either using cURL or from downloads.datastax.com/#enterprise website
+2. Download Stargate jars `stargate-jars.zip` from https://github.com/stargate/stargate/releases/download/v1.0.18/stargate-jars.zip
 
 ### Executing
 
 Define a custom logging location as applicable or else use the default logging locations,
 
    ```java
-   mkdir -p <path_to>/dse-6.8.7/logs
+   mkdir -p <path_to>/dse-6.8.11/logs
    ```
 
-Edit the `<path_to>/dse-6.8.7/bin/dse-env.sh` file by adding the following to specify custom logging location or else DSE process will fail to start,
+Edit the `<path_to>/dse-6.8.11/bin/dse-env.sh` file by adding the following to specify custom logging location or else DSE process will fail to start,
 
    ```java
-   export CASSANDRA_LOG_DIR="<path_to>/dse-6.8.7/logs"
+   export CASSANDRA_LOG_DIR="<path_to>/dse-6.8.11/logs"
    ```
 
 Make adjustments to `cassandra.yaml` file as applicable to modify the default locations. See [resources section at the bottom of this post](https://github.com/msmygit/dse-titbits/blob/master/scripts/stargate-dse687/Working_with_Stargate_and_DSE.md#resources-for-further-reading) for references. I'm going to change my cluster name (`cluster_name` property value at `cassandra.yaml` file) to `stargate` for this demonstration.
 
-Start up the DSE process by running `<path_to>/dse-6.8.7/bin/dse cassandra` command and wait until you see a *similar* informational logging line,
+Start up the DSE process by running `<path_to>/dse-6.8.11/bin/dse cassandra` command and wait until you see a *similar* informational logging line,
 
    ```java
    ...
    INFO  [DSE main thread] 2020-12-11 20:39:35,312  DseDaemon.java:818 - DSE startup complete.
    ```
 
-Verify by running `<path_to>/dse-6.8.7/bin/cqlsh` command which will display an output similar to below,
+Verify by running `<path_to>/dse-6.8.11/bin/cqlsh` command which will display an output similar to below,
 
    ```java
    $ cqlsh
    Connected to stargate at 127.0.0.1:9042.
-   [cqlsh 5.0.1 | DSE 6.8.7 | CQL spec 3.4.5 | DSE protocol v2]
+   [cqlsh 5.0.1 | DSE 6.8.11 | CQL spec 3.4.5 | DSE protocol v2]
    Use HELP for help.
    cqlsh>
    ```
@@ -168,7 +168,7 @@ Verify by running `<path_to>/dse-6.8.7/bin/cqlsh` command which will display an 
 Now, it is time to start the Stargate by running the below command,
 
    ```java
-   stargate-1.1.0-jars/starctl --cluster-name stargate --cluster-seed 127.0.0.1 --dse --dc dc1 --rack rack2 --listen 127.0.0.2 --cluster-version 6.8
+   stargate-jars/starctl --cluster-name stargate --cluster-seed 127.0.0.1 --dse --dc dc1 --rack rack2 --listen 127.0.0.2 --cluster-version 6.8
    ```
 
 This will break and the startup will fail unless I am able to provision an additional loopback address for running Stargate at `127.0.0.2`.
@@ -178,17 +178,17 @@ No sweat 😅. Our Stargate developers from DataStax have provided directions fo
 I am going to pick the pre-built Docker image route as opposed to adding an additional loopback by following the below steps: 
 
    ```java
-   $ docker pull stargateio/stargate-dse-68:v1.0.0
-   v1.0.0: Pulling from stargateio/stargate-dse-68
+   $ docker pull stargateio/stargate-dse-68:v1.0.18
+   v1.0.18: Pulling from stargateio/stargate-dse-68
    Digest: sha256:3fd3d40eccd03ebf9f28934d5cc3340e7fdabddc3ddc052d09b2ced5e30bc64b
-   Status: Image is up to date for stargateio/stargate-dse-68:v1.0.0
-   docker.io/stargateio/stargate-dse-68:v1.0.0
+   Status: Image is up to date for stargateio/stargate-dse-68:v1.0.18
+   docker.io/stargateio/stargate-dse-68:v1.0.18
    ```
 
 Now let's start Stargate by running the following command,
 
    ```java
-   docker run --name stargate1 -d stargateio/stargate-dse-68:v1.0.0 --cluster-name stargate --cluster-seed 127.0.0.1 --cluster-version 6.8 --listen 127.0.0.2 --dse --dc dc1 --rack rack2
+   docker run --name stargate1 -d stargateio/stargate-dse-68:v1.0.18 --cluster-name stargate --cluster-seed 127.0.0.1 --cluster-version 6.8 --listen 127.0.0.2 --dse --dc dc1 --rack rack2
    ```
 
 ### Resources for further reading,

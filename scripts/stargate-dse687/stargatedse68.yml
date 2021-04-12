@@ -4,7 +4,7 @@ version: '2'
 
 services:
   backend-1:
-    image: datastax/dse-server:6.8.9
+    image: datastax/dse-server:6.8.11
     container_name: backend-1
     networks:
       - backend
@@ -20,7 +20,7 @@ services:
       - RACK=rack1
       - DS_LICENSE=accept
   backend-2:
-    image: datastax/dse-server:6.8.9
+    image: datastax/dse-server:6.8.11
     container_name: backend-2
     networks:
       - backend
@@ -36,7 +36,7 @@ services:
       - RACK=rack2
       - DS_LICENSE=accept
   backend-3:
-    image: datastax/dse-server:6.8.9
+    image: datastax/dse-server:6.8.11
     container_name: backend-3
     networks:
       - backend
@@ -52,7 +52,7 @@ services:
       - RACK=rack3
       - DS_LICENSE=accept
   stargate:
-    image: stargateio/stargate-dse-68:v1.0.5
+    image: stargateio/stargate-dse-68:v1.0.18
     container_name: stargate
     depends_on: 
       - backend-1
