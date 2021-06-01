@@ -66,7 +66,7 @@ Astra provides the following features out of the box,
 |https://astra.datastax.com/register|https://docs.astra.datastax.com/docs/sample-apps|https://www.datastax.com/blog/2020/07/take-flight-live-and-free-migration-your-apache-cassandra-apps|
 ---
 
-See all these in a video by clicking [here](https://youtu.be/BWYKQHXfpsg)!
+See all these in a video by clicking [here](https://youtu.be/Gi2agdmH8qo)!
 
 ## Agenda
 Today's agenda is to demonstrate how to hook up Stargate with DataStax Enterprise&trade; (DSE) using:
