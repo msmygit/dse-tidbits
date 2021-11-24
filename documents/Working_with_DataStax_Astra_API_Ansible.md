@@ -91,7 +91,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:41:03 GMT",
+       "date": "Tue, 16 Nov 2021 02:41:03 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -343,7 +343,7 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json; charset=UTF-8",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:41:03 GMT",
+           "date": "Tue, 16 Nov 2021 02:41:03 GMT",
            "elapsed": 0,
            "failed": false,
            "json": [
@@ -436,7 +436,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:41:04 GMT",
+       "date": "Tue, 16 Nov 2021 02:41:04 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -445,8 +445,8 @@ You would notice output similar to the below post your playbook has completed su
                "body": {
                    "capacityUnits": 1,
                    "cloudProvider": "AWS",
-                   "keyspace": "astra2",
-                   "name": "astra2",
+                   "keyspace": "astra",
+                   "name": "astra",
                    "region": "us-east-1",
                    "tier": "serverless"
                },
@@ -494,7 +494,7 @@ You would notice output similar to the below post your playbook has completed su
                "validate_certs": true
            }
        },
-       "location": "https://api.astra.datastax.com/v2/733435ea-3baf-480a-86df-15b0f419794f",
+       "location": "https://api.astra.datastax.com/v2/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "msg": "OK (0 bytes)",
        "redirected": false,
        "server": "istio-envoy",
@@ -507,7 +507,7 @@ You would notice output similar to the below post your playbook has completed su
    TASK [Print the create Astra database response for debugging] *****************************************************************************************************************************************************
    task path: /home/ansible/astra_api/astra_api.yml:80
    ok: [localhost] => {
-       "create_astra_db_response.location": "https://api.astra.datastax.com/v2/733435ea-3baf-480a-86df-15b0f419794f"
+       "create_astra_db_response.location": "https://api.astra.datastax.com/v2/84be8c7b-5241-4eb1-99d0-2414d7b5908f"
    }
    
    TASK [Find the created Astra database using its ID] ***************************************************************************************************************************************************************
@@ -528,7 +528,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:41:05 GMT",
+       "date": "Tue, 16 Nov 2021 02:41:05 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -572,7 +572,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -597,12 +597,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -610,7 +610,7 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
@@ -622,11 +622,11 @@ You would notice output similar to the below post your playbook has completed su
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -645,7 +645,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (1876 bytes)",
@@ -654,7 +654,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "18"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -672,7 +672,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:41:35 GMT",
+       "date": "Tue, 16 Nov 2021 02:41:35 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -716,7 +716,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -741,12 +741,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -754,7 +754,7 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
@@ -766,11 +766,11 @@ You would notice output similar to the below post your playbook has completed su
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -789,7 +789,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (1881 bytes)",
@@ -798,7 +798,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "23"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -816,7 +816,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:42:06 GMT",
+       "date": "Tue, 16 Nov 2021 02:42:06 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -860,7 +860,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -885,12 +885,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -898,7 +898,7 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
@@ -910,11 +910,11 @@ You would notice output similar to the below post your playbook has completed su
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -933,7 +933,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (1881 bytes)",
@@ -942,7 +942,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "17"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -960,7 +960,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:42:36 GMT",
+       "date": "Tue, 16 Nov 2021 02:42:36 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1004,7 +1004,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1029,12 +1029,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1042,23 +1042,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=75f20092db56a1329d7c2b64e95f41609da8e8b7aa143b2208858cbc72934773",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d694a76a1c9f617cc8d1f2200098d2dbbc02ce367518b4647ff3cc84316d75e1",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5d6394a72444419441213d6d1c5990dc0c2a91a7fecf72649126dc2ebaa18e24",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ba5a824a5114b9c497abc67a24649fa6614c07961e18538af354cc59c99c4b7a",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=75f20092db56a1329d7c2b64e95f41609da8e8b7aa143b2208858cbc72934773",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d694a76a1c9f617cc8d1f2200098d2dbbc02ce367518b4647ff3cc84316d75e1",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5d6394a72444419441213d6d1c5990dc0c2a91a7fecf72649126dc2ebaa18e24",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024236Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ba5a824a5114b9c497abc67a24649fa6614c07961e18538af354cc59c99c4b7a",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1077,7 +1077,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3551 bytes)",
@@ -1086,7 +1086,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "20"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -1104,7 +1104,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:43:07 GMT",
+       "date": "Tue, 16 Nov 2021 02:43:07 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1148,7 +1148,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1173,12 +1173,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1186,23 +1186,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=aa16fdf6cc86a54ec7de4bca6c98d2c043ee76d55e6b564bd5ada01c393ef047",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=df80e3ebb94e072549852b43818ff5d28d4ee86ebbbd21b6597df312f2c92452",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0a30fe52a5d9465da5ef7a6f499618d943c511bddb8b47b9364cbeb0860d374d",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=e3cf54c5ebaf5e61fd042f918a8d748d034241d53b9112daba80c305a6570279",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=aa16fdf6cc86a54ec7de4bca6c98d2c043ee76d55e6b564bd5ada01c393ef047",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=df80e3ebb94e072549852b43818ff5d28d4ee86ebbbd21b6597df312f2c92452",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0a30fe52a5d9465da5ef7a6f499618d943c511bddb8b47b9364cbeb0860d374d",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024307Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=e3cf54c5ebaf5e61fd042f918a8d748d034241d53b9112daba80c305a6570279",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1221,7 +1221,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3551 bytes)",
@@ -1230,7 +1230,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "20"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -1248,7 +1248,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:43:37 GMT",
+       "date": "Tue, 16 Nov 2021 02:43:37 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1292,7 +1292,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1317,12 +1317,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1330,23 +1330,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1a2361e53f38f2c0ecb988db5167b77fe8c9e4dfb389f1895cea1b626c151f64",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=466a13b10423b00973ac891865833ff58663cf313ce48ec394b785020432b382",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=52523b2a0a6b9b016c25a309185a26396cd1944436917a4aad082c47818a6075",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4ca887eb5a9951e5dfb4a245f6243849f59bbe1db9106d0baf21ca5ba139702f",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1a2361e53f38f2c0ecb988db5167b77fe8c9e4dfb389f1895cea1b626c151f64",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=466a13b10423b00973ac891865833ff58663cf313ce48ec394b785020432b382",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=52523b2a0a6b9b016c25a309185a26396cd1944436917a4aad082c47818a6075",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024337Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4ca887eb5a9951e5dfb4a245f6243849f59bbe1db9106d0baf21ca5ba139702f",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1365,7 +1365,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3551 bytes)",
@@ -1374,7 +1374,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "20"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -1392,7 +1392,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:44:08 GMT",
+       "date": "Tue, 16 Nov 2021 02:44:08 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1436,7 +1436,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1461,12 +1461,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1474,23 +1474,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f3dd58b838a9c359dd1f7935fa8cf8f545ca3a31801f756b30c098585c66edde",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7bf06812efe85ed5d9a6b24b7b804d27548baffe54a80bdabcca771e271d2b92",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ce05c42742221dfefd2b9bc4d17e35a41ff70604d28669e0ec3861dcf4ad1948",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fc50fd2bdbf5d7e2b3b85cbfd6b981ab6f0fc3cf50878954f4c6b9de2493bd42",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f3dd58b838a9c359dd1f7935fa8cf8f545ca3a31801f756b30c098585c66edde",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7bf06812efe85ed5d9a6b24b7b804d27548baffe54a80bdabcca771e271d2b92",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ce05c42742221dfefd2b9bc4d17e35a41ff70604d28669e0ec3861dcf4ad1948",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024408Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fc50fd2bdbf5d7e2b3b85cbfd6b981ab6f0fc3cf50878954f4c6b9de2493bd42",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1509,7 +1509,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3551 bytes)",
@@ -1518,7 +1518,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "16"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -1536,7 +1536,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:44:39 GMT",
+       "date": "Tue, 16 Nov 2021 02:44:39 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1580,7 +1580,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1605,12 +1605,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1618,23 +1618,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=90d6df01e79fa2ee0a0ca9e85707e56d71a19acd3e46dbae4a485f734f10ca34",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4bdee8414c35bc9361d3b998d266e29bbfa871269447fdf2292c7157ebeb79ac",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb090f450002127b48d38d4256ce4bed010e6de0b5fed595916a1fddb617e149",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=24261b38064eebcfbcdfea5c4436b7b338ee91019e3561d00c0240584641fd6a",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=90d6df01e79fa2ee0a0ca9e85707e56d71a19acd3e46dbae4a485f734f10ca34",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4bdee8414c35bc9361d3b998d266e29bbfa871269447fdf2292c7157ebeb79ac",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb090f450002127b48d38d4256ce4bed010e6de0b5fed595916a1fddb617e149",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=24261b38064eebcfbcdfea5c4436b7b338ee91019e3561d00c0240584641fd6a",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1653,7 +1653,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3551 bytes)",
@@ -1662,7 +1662,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "20"
    }
    <127.0.0.1> EXEC /bin/sh -c 'echo ~ansible && sleep 0'
@@ -1680,7 +1680,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:45:09 GMT",
+       "date": "Tue, 16 Nov 2021 02:45:09 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1724,7 +1724,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1755,12 +1755,12 @@ You would notice output similar to the below post your playbook has completed su
                "costPerReadGbCents": 0.1,
                "costPerWrittenGbCents": 0.1
            },
-           "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+           "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
            "creationTime": "2021-03-16T02:41:04Z",
-           "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-           "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-           "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+           "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+           "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+           "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "info": {
                "capacityUnits": 1,
                "cloudProvider": "AWS",
@@ -1768,23 +1768,23 @@ You would notice output similar to the below post your playbook has completed su
                    {
                        "capacityUnits": 1,
                        "cloudProvider": "AWS",
-                       "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                       "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                        "name": "dc-1",
                        "region": "us-east-1",
                        "regionClassification": "standard",
                        "regionZone": "na",
-                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d9743afc8a0b7f1ee8dc7a143fd5f83bb173a545289ceb66fbb8e290f350e8a6",
-                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a94209c8527dd0f69ba74c6633d86e34d5bd797419620dae8de53551981291f1",
-                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=05eb5bdebd120cf772a70aa29e74aa5ca8ba6aad0fd07a02205c30ecd916747f",
-                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2e287628ac2c39399852ea2c7999be830452cfee4d76242bec29d6358ad4284e",
+                       "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d9743afc8a0b7f1ee8dc7a143fd5f83bb173a545289ceb66fbb8e290f350e8a6",
+                       "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a94209c8527dd0f69ba74c6633d86e34d5bd797419620dae8de53551981291f1",
+                       "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=05eb5bdebd120cf772a70aa29e74aa5ca8ba6aad0fd07a02205c30ecd916747f",
+                       "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2e287628ac2c39399852ea2c7999be830452cfee4d76242bec29d6358ad4284e",
                        "tier": "serverless"
                    }
                ],
-               "keyspace": "astra2",
+               "keyspace": "astra",
                "keyspaces": [
-                   "astra2"
+                   "astra"
                ],
-               "name": "astra2",
+               "name": "astra",
                "region": "us-east-1",
                "tier": "serverless"
            },
@@ -1803,7 +1803,7 @@ You would notice output similar to the below post your playbook has completed su
                "totalStorage": 5,
                "usedStorage": 2
            },
-           "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+           "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
            "terminationTime": "0001-01-01T00:00:00Z"
        },
        "msg": "OK (3613 bytes)",
@@ -1811,7 +1811,7 @@ You would notice output similar to the below post your playbook has completed su
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
        "x_envoy_upstream_service_time": "19"
    }
    
@@ -1826,7 +1826,7 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json; charset=UTF-8",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:45:09 GMT",
+           "date": "Tue, 16 Nov 2021 02:45:09 GMT",
            "elapsed": 0,
            "failed": false,
            "json": {
@@ -1853,12 +1853,12 @@ You would notice output similar to the below post your playbook has completed su
                    "costPerReadGbCents": 0.1,
                    "costPerWrittenGbCents": 0.1
                },
-               "cqlshUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/cqlsh",
+               "cqlshUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/cqlsh",
                "creationTime": "2021-03-16T02:41:04Z",
-               "dataEndpointUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest",
-               "grafanaUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
-               "graphqlUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/graphql",
-               "id": "733435ea-3baf-480a-86df-15b0f419794f",
+               "dataEndpointUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest",
+               "grafanaUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.dashboard.astra.datastax.com/d/cloud/dse-cluster-condensed?refresh=30s&orgId=1&kiosk=tv",
+               "graphqlUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/graphql",
+               "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                "info": {
                    "capacityUnits": 1,
                    "cloudProvider": "AWS",
@@ -1866,23 +1866,23 @@ You would notice output similar to the below post your playbook has completed su
                        {
                            "capacityUnits": 1,
                            "cloudProvider": "AWS",
-                           "id": "733435ea-3baf-480a-86df-15b0f419794f",
+                           "id": "84be8c7b-5241-4eb1-99d0-2414d7b5908f",
                            "name": "dc-1",
                            "region": "us-east-1",
                            "regionClassification": "standard",
                            "regionZone": "na",
-                           "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d9743afc8a0b7f1ee8dc7a143fd5f83bb173a545289ceb66fbb8e290f350e8a6",
-                           "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a94209c8527dd0f69ba74c6633d86e34d5bd797419620dae8de53551981291f1",
-                           "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=05eb5bdebd120cf772a70aa29e74aa5ca8ba6aad0fd07a02205c30ecd916747f",
-                           "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2e287628ac2c39399852ea2c7999be830452cfee4d76242bec29d6358ad4284e",
+                           "secureBundleInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d9743afc8a0b7f1ee8dc7a143fd5f83bb173a545289ceb66fbb8e290f350e8a6",
+                           "secureBundleMigrationProxyInternalUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a94209c8527dd0f69ba74c6633d86e34d5bd797419620dae8de53551981291f1",
+                           "secureBundleMigrationProxyUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=05eb5bdebd120cf772a70aa29e74aa5ca8ba6aad0fd07a02205c30ecd916747f",
+                           "secureBundleUrl": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024509Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2e287628ac2c39399852ea2c7999be830452cfee4d76242bec29d6358ad4284e",
                            "tier": "serverless"
                        }
                    ],
-                   "keyspace": "astra2",
+                   "keyspace": "astra",
                    "keyspaces": [
-                       "astra2"
+                       "astra"
                    ],
-                   "name": "astra2",
+                   "name": "astra",
                    "region": "us-east-1",
                    "tier": "serverless"
                },
@@ -1901,7 +1901,7 @@ You would notice output similar to the below post your playbook has completed su
                    "totalStorage": 5,
                    "usedStorage": 2
                },
-               "studioUrl": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.studio.astra.datastax.com",
+               "studioUrl": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.studio.astra.datastax.com",
                "terminationTime": "0001-01-01T00:00:00Z"
            },
            "msg": "OK (3613 bytes)",
@@ -1909,7 +1909,7 @@ You would notice output similar to the below post your playbook has completed su
            "server": "istio-envoy",
            "status": 200,
            "strict_transport_security": "max-age=63072000; include-subdomains",
-           "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f",
+           "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f",
            "x_envoy_upstream_service_time": "19"
        }
    }
@@ -1931,7 +1931,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json; charset=UTF-8",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:45:10 GMT",
+       "date": "Tue, 16 Nov 2021 02:45:10 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -1975,7 +1975,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f/secureBundleURL",
+               "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secureBundleURL",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -1983,17 +1983,17 @@ You would notice output similar to the below post your playbook has completed su
            }
        },
        "json": {
-           "downloadURL": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3575a25b299c083aa29e003824f93c13f2989bbd2bcf74f0ad56266055cd65de",
-           "downloadURLInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48bf632e04c94902e262b8dff883a98f8c08981fcde9a2c63b2b513cddbc9595",
-           "downloadURLMigrationProxy": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3f11c35897e1d9ca1cf98c3b52506022a5b8cf5882eb3f75b21bff3703e5feb7",
-           "downloadURLMigrationProxyInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad717250221f98596082c15460f4931dc1e5cf9bec41713e95c96213f07577fa"
+           "downloadURL": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3575a25b299c083aa29e003824f93c13f2989bbd2bcf74f0ad56266055cd65de",
+           "downloadURLInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48bf632e04c94902e262b8dff883a98f8c08981fcde9a2c63b2b513cddbc9595",
+           "downloadURLMigrationProxy": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3f11c35897e1d9ca1cf98c3b52506022a5b8cf5882eb3f75b21bff3703e5feb7",
+           "downloadURLMigrationProxyInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad717250221f98596082c15460f4931dc1e5cf9bec41713e95c96213f07577fa"
        },
        "msg": "OK (1811 bytes)",
        "redirected": false,
        "server": "istio-envoy",
        "status": 200,
        "strict_transport_security": "max-age=63072000; include-subdomains",
-       "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f/secureBundleURL",
+       "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secureBundleURL",
        "x_envoy_upstream_service_time": "19"
    }
    
@@ -2007,21 +2007,21 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json; charset=UTF-8",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:45:10 GMT",
+           "date": "Tue, 16 Nov 2021 02:45:10 GMT",
            "elapsed": 0,
            "failed": false,
            "json": {
-               "downloadURL": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3575a25b299c083aa29e003824f93c13f2989bbd2bcf74f0ad56266055cd65de",
-               "downloadURLInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48bf632e04c94902e262b8dff883a98f8c08981fcde9a2c63b2b513cddbc9595",
-               "downloadURLMigrationProxy": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3f11c35897e1d9ca1cf98c3b52506022a5b8cf5882eb3f75b21bff3703e5feb7",
-               "downloadURLMigrationProxyInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/733435ea-3baf-480a-86df-15b0f419794f/secure-connect-proxy-internal-astra2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad717250221f98596082c15460f4931dc1e5cf9bec41713e95c96213f07577fa"
+               "downloadURL": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3575a25b299c083aa29e003824f93c13f2989bbd2bcf74f0ad56266055cd65de",
+               "downloadURLInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48bf632e04c94902e262b8dff883a98f8c08981fcde9a2c63b2b513cddbc9595",
+               "downloadURLMigrationProxy": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3f11c35897e1d9ca1cf98c3b52506022a5b8cf5882eb3f75b21bff3703e5feb7",
+               "downloadURLMigrationProxyInternal": "https://datastax-cluster-config-prod.s3.us-east-2.amazonaws.com/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secure-connect-proxy-internal-astra.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2AIQRQ76TUCOHUQ4%2F20210316%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210316T024510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad717250221f98596082c15460f4931dc1e5cf9bec41713e95c96213f07577fa"
            },
            "msg": "OK (1811 bytes)",
            "redirected": false,
            "server": "istio-envoy",
            "status": 200,
            "strict_transport_security": "max-age=63072000; include-subdomains",
-           "url": "https://api.astra.datastax.com/v2/databases/733435ea-3baf-480a-86df-15b0f419794f/secureBundleURL",
+           "url": "https://api.astra.datastax.com/v2/databases/84be8c7b-5241-4eb1-99d0-2414d7b5908f/secureBundleURL",
            "x_envoy_upstream_service_time": "19"
        }
    }
@@ -2043,7 +2043,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:45:11 GMT",
+       "date": "Tue, 16 Nov 2021 02:45:11 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -2087,7 +2087,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
+               "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -2098,7 +2098,7 @@ You would notice output similar to the below post your playbook has completed su
            "37333334333565612d336261662d343830612d383664662d313562306634313937393466_astra2",
            "37333334333565612d336261662d343830612d383664662d313562306634313937393466_data_endpoint_auth",
            "37333334333565612d336261662d343830612d383664662d313562306634313937393466_datastax_sla",
-           "astra2",
+           "astra",
            "data_endpoint_auth",
            "datastax_sla",
            "system",
@@ -2110,7 +2110,7 @@ You would notice output similar to the below post your playbook has completed su
        "redirected": false,
        "server": "nginx/1.19.7",
        "status": 200,
-       "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
+       "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
        "vary": "Accept-Encoding"
    }
    
@@ -2124,14 +2124,14 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:45:11 GMT",
+           "date": "Tue, 16 Nov 2021 02:45:11 GMT",
            "elapsed": 0,
            "failed": false,
            "json": [
                "37333334333565612d336261662d343830612d383664662d313562306634313937393466_astra2",
                "37333334333565612d336261662d343830612d383664662d313562306634313937393466_data_endpoint_auth",
                "37333334333565612d336261662d343830612d383664662d313562306634313937393466_datastax_sla",
-               "astra2",
+               "astra",
                "data_endpoint_auth",
                "datastax_sla",
                "system",
@@ -2143,7 +2143,7 @@ You would notice output similar to the below post your playbook has completed su
            "redirected": false,
            "server": "nginx/1.19.7",
            "status": 200,
-           "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
+           "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v1/keyspaces",
            "vary": "Accept-Encoding"
        }
    }
@@ -2165,7 +2165,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:45:12 GMT",
+       "date": "Tue, 16 Nov 2021 02:45:12 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -2200,7 +2200,7 @@ You would notice output similar to the below post your playbook has completed su
                        }
                    ],
                    "ifNotExists": true,
-                   "name": "astra2",
+                   "name": "astra",
                    "primaryKey": {
                        "clusteringKey": [
                            "ck1",
@@ -2262,7 +2262,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables",
+               "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -2270,13 +2270,13 @@ You would notice output similar to the below post your playbook has completed su
            }
        },
        "json": {
-           "name": "astra2"
+           "name": "astra"
        },
        "msg": "OK (17 bytes)",
        "redirected": false,
        "server": "nginx/1.19.7",
        "status": 201,
-       "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables"
+       "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables"
    }
    
    TASK [Print the created Astra database table name response for debugging] *****************************************************************************************************************************************
@@ -2289,17 +2289,17 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:45:12 GMT",
+           "date": "Tue, 16 Nov 2021 02:45:12 GMT",
            "elapsed": 0,
            "failed": false,
            "json": {
-               "name": "astra2"
+               "name": "astra"
            },
            "msg": "OK (17 bytes)",
            "redirected": false,
            "server": "nginx/1.19.7",
            "status": 201,
-           "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables"
+           "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables"
        }
    }
    
@@ -2320,7 +2320,7 @@ You would notice output similar to the below post your playbook has completed su
        "content_type": "application/json",
        "cookies": {},
        "cookies_string": "",
-       "date": "Tue, 16 Mar 2021 02:45:12 GMT",
+       "date": "Tue, 16 Nov 2021 02:45:12 GMT",
        "elapsed": 0,
        "invocation": {
            "module_args": {
@@ -2364,7 +2364,7 @@ You would notice output similar to the below post your playbook has completed su
                "timeout": 30,
                "unix_socket": null,
                "unsafe_writes": null,
-               "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables",
+               "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables",
                "url_password": null,
                "url_username": null,
                "use_proxy": true,
@@ -2401,8 +2401,8 @@ You would notice output similar to the below post your playbook has completed su
                            "typeDefinition": "timeuuid"
                        }
                    ],
-                   "keyspace": "astra2",
-                   "name": "astra2",
+                   "keyspace": "astra",
+                   "name": "astra",
                    "primaryKey": {
                        "clusteringKey": [
                            "ck1",
@@ -2433,7 +2433,7 @@ You would notice output similar to the below post your playbook has completed su
        "redirected": false,
        "server": "nginx/1.19.7",
        "status": 200,
-       "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables",
+       "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables",
        "vary": "Accept-Encoding"
    }
    
@@ -2447,7 +2447,7 @@ You would notice output similar to the below post your playbook has completed su
            "content_type": "application/json",
            "cookies": {},
            "cookies_string": "",
-           "date": "Tue, 16 Mar 2021 02:45:12 GMT",
+           "date": "Tue, 16 Nov 2021 02:45:12 GMT",
            "elapsed": 0,
            "failed": false,
            "json": {
@@ -2480,8 +2480,8 @@ You would notice output similar to the below post your playbook has completed su
                                "typeDefinition": "timeuuid"
                            }
                        ],
-                       "keyspace": "astra2",
-                       "name": "astra2",
+                       "keyspace": "astra",
+                       "name": "astra",
                        "primaryKey": {
                            "clusteringKey": [
                                "ck1",
@@ -2512,7 +2512,7 @@ You would notice output similar to the below post your playbook has completed su
            "redirected": false,
            "server": "nginx/1.19.7",
            "status": 200,
-           "url": "https://733435ea-3baf-480a-86df-15b0f419794f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra2/tables",
+           "url": "https://84be8c7b-5241-4eb1-99d0-2414d7b5908f-us-east-1.apps.astra.datastax.com/api/rest/v2/schemas/keyspaces/astra/tables",
            "vary": "Accept-Encoding"
        }
    }
@@ -2599,8 +2599,7 @@ You should be seeing the result as below,
    ![alt text](astra_playground/astra_api_demo_2.png "Example CQL Console screen output of the created Astra&trade; keyspace & table")
 
 ### Resources for further reading,
-* [Using the Astra&trade; Data API Reference](https://docs.astra.datastax.com/reference#datastax-astra-data-api)
-* [Using the Astra&trade; DevOps API Reference](https://docs.astra.datastax.com/reference#datastax-astra-devops-api)
+* [Using the Astra&trade; DevOps & Data APIs Reference](https://docs.astra.datastax.com/reference#datastax-astra-data-api)
 * [Supported Astra&trade; DB service tiers](https://docs.astra.datastax.com/docs/service-tier-options)
 
 ---
