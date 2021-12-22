@@ -2602,8 +2602,10 @@ You should now be seeing the result as below in the Astra&trade; GUI:
 
    ![alt text](astra_playground/astra_api_demo_2.png "Example CQL Console screen output of the created Astra&trade; DB's keyspace & table")
 
-### Resources for further reading,
+### What's next?
+I could have done even more with the ever increasing capabilities of the Astra&trade; DevOps and Data APIs like creating the users, their tokens, access list, private link and more! Check out for yourselves at,
 * [Using the Astra&trade; DevOps & Data APIs Reference](https://docs.astra.datastax.com/reference#datastax-astra-data-api)
+* [Using the Astra&trade; DevOps APIs examples](https://docs.datastax.com/en/astra/docs/devops-api.html)
 * [Supported Astra&trade; DB service tiers](https://docs.astra.datastax.com/docs/service-tier-options)
 
 ---
