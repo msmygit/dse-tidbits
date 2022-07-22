@@ -39,10 +39,11 @@ Astra provides the following features out of the box,
 
 ### Prerequisites
 1. Download and setup [NoSQLBench](https://github.com/nosqlbench/nosqlbench/blob/main/DOWNLOADS.md#getting-nosqlbench)
-2. [Astra database created](https://docs.astra.datastax.com/docs/creating-your-astra-database)
-3. [Secure connect bundle downloaded for the Astra database](https://docs.astra.datastax.com/docs/obtaining-database-credentials)
-4. You Astra database password stored in a file named `passfile.txt`
-5. Download the [`astra.yaml` file](astra_playground/astra.yaml) to your local machine
+2. [Astra database created](https://docs.datastax.com/en/astra/docs/manage/db/manage-create.html)
+3. [Secure connect bundle downloaded for the Astra database](https://docs.datastax.com/en/astra/docs/connect/secure-connect-bundle.html)
+4. [Create an application token with proper permissions](https://docs.datastax.com/en/astra/docs/manage/org/managing-org.html#_create_application_token)
+5. You Astra database password (`ClientSecret` from step 4) stored in a file named `passfile.txt`
+6. Download the [`astra.yaml` file](astra_playground/astra.yaml) to your local machine
 
 #### Create the tables
 Run the below command from a terminal to create the schema in the Astra database,
