@@ -2,6 +2,7 @@ This repository contains a number of auxiliary scripts, code and documents for C
 
 # What is included?
 ## [Documentation](documents/)
+* [Working with Astra Vector Search with SAI Analyzers](documents/astra_vector_search_with_sai_analyzer/Vector_Search_with_AstraDB_SAI_Analyzers.ipynb)
 * [Working with DataStax Astra&trade;](documents/Working_with_DataStax_Astra.md)
 * [Working with DataStax Astra&trade; DevOps & Data APIs with Ansible](documents/Working_with_DataStax_Astra_API_Ansible.md)
 * [Public cloud provider status dashboards, architectural diagrams, etc.,](documents/Cloud_provider_status_dashboards_icons_and_general.md)
